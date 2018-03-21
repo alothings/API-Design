@@ -9,6 +9,35 @@ Goal: Help developers design Simple, Consistent and Easy-to-Use APIs
   + Methods
   + Endpoints
   + Parameters
+
+*** Design Flow
+Types of resources, relationships between resources, 
+Decide resource name schemes based on types and relationships, Resource schemas
+Attach minimum set of methods to resources
+*** Resources
+- Collection: List of resources of same type
+- Resource: Has some state. Zero or more sub-resources. They can me simple or collection
+*** Methods
+- List, Get, Create, Update, Delete
+** Resource Names
+Full resource names => resemble URLs, but they can be different
+// This is a calendar event resource name.
+"//calendar.googleapis.com/users/john smith/events/123"
+
+// This is the corresponding HTTP URL.
+"https://calendar.googleapis.com/v3/users/john%20smith/events/123"
+
+** Methods
+List: GET (collection URL)
+Get: GET (resource URL)
+Create: POST (collection URL)
+Update: PUT or PATCH (resource URL)
+Delete: DELETE (resource URL)
+
+
+
+
+** Other 
 *** Architectural Properties
   - Performance
   - Scalability
@@ -17,14 +46,13 @@ Goal: Help developers design Simple, Consistent and Easy-to-Use APIs
   - Visibility of communicatio between Components by Service Agents
   - Portability of components by moving program code with data
   - Reliability is the resistance to failure
-
 *** Architectural Constraints
-- Client Server Architecture
-- Statelessness
-- Cacheability
-- Layered System
-- Code on Demand (optional)
-- Uniform Interace
+1. Client Server Architecture
+2. Statelessness
+3. Cacheability
+4. Layered System
+5. Code on Demand (optional)
+6. Uniform Interace
 ***  REST API is:
 A modeled as *collections* of individually-addressable resources (the nouns of the API).
 Resources referenced with their resource names and manipulated via methods (the verbs of the API).
