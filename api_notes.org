@@ -1,0 +1,46 @@
+* Google Cloud APIs - Design Guide
+** Resource Oriented Design
+Goal: Help developers design Simple, Consistent and Easy-to-Use APIs
+- Define Resources, to manipulate with small number of methods
+- Resources and Methods = nouns and verbs of APIs
+  - POST, GET, PUT, PATCH, and DELETE 
+- Items: 
+  + Resources
+  + Methods
+  + Endpoints
+  + Parameters
+*** Architectural Properties
+  - Performance
+  - Scalability
+  - Simplicity of a Uniform Interface
+  - Modifiability of Components
+  - Visibility of communicatio between Components by Service Agents
+  - Portability of components by moving program code with data
+  - Reliability is the resistance to failure
+
+*** Architectural Constraints
+- Client Server Architecture
+- Statelessness
+- Cacheability
+- Layered System
+- Code on Demand (optional)
+- Uniform Interace
+***  REST API is:
+A modeled as *collections* of individually-addressable resources (the nouns of the API).
+Resources referenced with their resource names and manipulated via methods (the verbs of the API).
+
+* Learn API Design [https://github.com/dwyl/learn-api-design]
+**  CRUD: Create, Read, Update and Delete
+Basic methods of Persistent Storage.
+create: Put, Post
+read: Get
+Update: Put, Post, Patch
+Delete: Delete
+
+* General Stuff
+** Microservices
+Variant of SOA architectural style. 
+Structures an application as a colleciton of loosely coupled services.
+Services should be fine-grained
+Protocols should be lightweight
+
