@@ -34,9 +34,6 @@ Create: POST (collection URL)
 Update: PUT or PATCH (resource URL)
 Delete: DELETE (resource URL)
 
-
-
-
 ** Other 
 *** Architectural Properties
   - Performance
